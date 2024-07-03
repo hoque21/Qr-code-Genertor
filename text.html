@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="">
+            <label for="name">Name:
+                <input type="text" name="text" id="text">
+            </label><br><br>
+            <label for="email">Email:
+                <input type="email" name="email" id="email">
+            </label><br><br>
+            <label for="password">Password:
+                <input type="password" name="password" id="password">
+            </label>
+        </form>
+    </div><br><br>
+    <div>
+        <button type="submit" value="SignUp">Sign Up</button>
+    </div>
+
+   <script>
+     const form = document.querySelector('form');
+     const nameInput = document.querySelector('#text');
+     const emailInput = document.querySelector('#email');
+     const passwordInput = document.querySelector('#password');
+
+     console.log(nameInput);
+     console.log(emailInput);
+     console.log(passwordInput);
+
+     form.addEventListener("submit", submitEvent);
+
+     function submitEvent(event) {
+        event.preventDefault();
+        console.log("Form submitted!");
+        // You can add additional logic for handling the form submission here.
+     }
+   </script>
+</body>
+</html>
